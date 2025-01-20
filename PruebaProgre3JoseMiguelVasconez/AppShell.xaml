@@ -7,9 +7,15 @@
     Shell.FlyoutBehavior="Disabled"
     Title="PruebaProgre3JoseMiguelVasconez">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Pagina Main"
+             Icon="https://i.pinimg.com/564x/bd/68/af/bd68af256a4c6fd0ada2f60183e88f39.jpg">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
+        </Tab>
+        <Tab Title="Pagina listas"
+             Icon="https://i.redd.it/oqt9l599zwl81.jpg">
+            <ShellContent ContentTemplate="{DataTemplate local:Listado}"/>
+        </Tab>
+    </TabBar>
 
 </Shell>
