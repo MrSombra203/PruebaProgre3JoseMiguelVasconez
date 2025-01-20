@@ -21,16 +21,24 @@
                     Placeholder="Ingrese El Nombre Del Pais Que Busca."
                     BackgroundColor="#ecf0f1"
                     HeightRequest="40"/>
-            <Label
-                x:Name="jmvasconez_label2"
-                Text="Nombre"
-                FontSize="24"
-                TextColor="#2c3e50"
-                HorizontalOptions="Start"/>
-            <Editor x:Name="jmvasconez_editor2"
-                    Placeholder="Ingrese El Nombre De La Persona Del Pais Que Ingreso Anterior Mente."
-                    BackgroundColor="#ecf0f1"
-                    HeightRequest="40"/>
+            <HorizontalStackLayout
+            Padding="30,0"
+            Spacing="25">
+                <Button
+                x:Name="jmvasconez_button1"
+                Text="Buscar País"
+                BackgroundColor="#3498db"
+                TextColor="White"
+                Command="{Binding BuscarCommand}"
+                CommandParameter="{Binding Text, Source={x:Reference jmvasconez_editor1}}"/>
+
+                <Button
+                x:Name="jmvasconez_button2"
+                Text="Limpiar"
+                BackgroundColor="#e74c3c"
+                TextColor="White"
+                Command="{Binding LimpiarCommand}"/>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
